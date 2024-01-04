@@ -28,6 +28,15 @@
           // Call the function to open the Calendly widget directly
           openCalendlyWidget();
         });
+
+        // Add an event listener for touch devices
+        link.addEventListener('touchend', function (event) {
+          // Prevent the default behavior of the anchor tag
+          event.preventDefault();
+
+          // Call the function to open the Calendly widget directly
+          openCalendlyWidget();
+        });
       });
     });
   </script>
@@ -110,8 +119,6 @@
         </div>
       </div>
     </div>
-
-	
 
 	<!-- Calendly badge widget begin -->
 	<!-- <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
