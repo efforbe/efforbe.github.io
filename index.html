@@ -40,7 +40,7 @@
 		</div>
 		<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
-	    	<a class="navbar-brand" href="index.html">Efforbe<span>Beauty</span></a>
+	    	<a class="navbar-brand" href="index.html">Efforbe <span>Beauty</span></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="fa fa-bars"></span> Menu
 	      </button>
@@ -71,12 +71,20 @@
       </div>
     </div>
 
+
+	<!-- Calendly badge widget begin -->
+	<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+	<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/efforbe', text: 'Book Appointment', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script>
+	<!-- Calendly badge widget end -->
+
 	  <section class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb">
 			<div class="overlay"></div>
     	<div class="container">
     		<div class="row d-md-flex justify-content-center">
     			<div class="col-md-12">
 	    			<div class="wrap-appointment bg-white d-md-flex pl-md-4 pb-5 pb-md-0">
+					<!--
 	    				<form action="#" class="appointment w-100">
 	    					<div class="row justify-content-center">
 									<div class="col-12 col-md d-flex align-items-center pt-4 pt-md-0">
@@ -134,11 +142,12 @@
 									</div>
 	    					</div>
 		          </form>
+				  -->
 		    		</div>
 		    	</div>
     		</div>
     	</div>
-    </section>
+    </section> 
 
     <section class="ftco-section ftco-no-pt ftco-no-pb">
     	<div class="container">
@@ -173,7 +182,7 @@
 		          <div class="col-md-12 heading-section ftco-animate">
 		          	<span class="subheading">Welcome to Efforbe Beauty</span>
 		            <h2 class="mb-4">Revitalize your style like never before</h2>
-		            <p>Step into our salon, where beauty meets simplicity. Our studio is a cozy haven at the heart of style, bringing you the essence of regal grooming. Join us in a space where every chat is a touch of paradise for your senses. Welcome to a world where elegance is effortless.</p>
+		            <p>Step into our modest yet welcoming salon, where beauty meets simplicity. Our studio is a cozy haven at the heart of style, bringing you the essence of regal grooming. Join us in a space where every chat is a touch of paradise for your senses. Welcome to a world where elegance is effortless.</p>
 		          </div>
 		        </div>
 						<div class="row ftco-counter py-5" id="section-counter">
@@ -213,92 +222,105 @@
     	</div>
     </section>
 
-    <section class="ftco-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5 mb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-          	<span class="subheading">Services</span>
-            <h2>How We Works</h2>
-          </div>
-        </div>
-    		<div class="row">
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-            <div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-workplace"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Office Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-          	<div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-pool"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Pool Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-            <div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-rug"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Carpet Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div> 
-          </div>
+    
+	<style>
+		.work-header-overlay {
+			background-color: rgba(255, 255, 255, 0.7); /* Transparent white background */
+			color: rgb(53, 47, 47); /* Text color */
+			padding: 2px; /* Adjust padding */
+			position: absolute;
+			top: 0; /* Place the header at the top */
+			left: 0;
+			right: 0;
+			text-align: center;
+		}
+		.inside-list-overlay {
+        background-color: rgba(100, 106, 108, 0.5); /* Transparent white background */
+        margin: 0 auto; 
+    }
+	</style>
+	
+	<section class="ftco-section ftco-no-pb">
+		<div class="container">
+			<div class="row justify-content-center pb-5 mb-3">
+				<div class="col-md-12 heading-section text-center ftco-animate">
+					<span class="subheading">Our Services</span>
+					<h2>We offer services both at your home and in our salon</h2>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-md-6 col-lg-3 ftco-animate">
+					<div class="work img d-flex align-items-center position-relative" style="background-image: url(images/straightening_1.jpg);">
+						<div class="work-header-overlay w-100">
+							<h4>Hair Styling</h4>
+						</div>
+						<div class="desc w-100 px-4 text-center pt-5 mt-5">
+							<div class="text w-100 mb-3 mt-4">
+								<div class="inside-list-overlay">
+								<h2><a href="work-single.html">Hair Straightening</a></h2>
+								<h2><a href="work-single.html">Hair Smoothening</a></h2>
+								<h2><a href="work-single.html">Hair Cutting</a></h2>
+								<h2><a href="work-single.html">Hair Coloring</a></h2>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 ftco-animate">
+					<div class="work img d-flex align-items-center position-relative" style="background-image: url(images/woman-washing-head.jpg);">
+						<div class="work-header-overlay w-100">
+							<h4>Hair Enchancement</h4>
+						</div>
+						<div class="desc w-100 px-4 text-center pt-5 mt-5">
+							<div class="text w-100 mb-3 mt-4">
+								<div class="inside-list-overlay">
+								<h2><a href="work-single.html">Keratin Treatment</a></h2>
+								<h2><a href="work-single.html">Hair Botox</a></h2>
+								<h2><a href="work-single.html">Hair Spa</a></h2>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 ftco-animate">
+					<div class="work img d-flex align-items-center position-relative" style="background-image: url(images/manicure.jpg);">
+						<div class="work-header-overlay w-100">
+							<h4>Nail Care</h4>
+						</div>
+						<div class="desc w-100 px-4 text-center pt-5 mt-5">
+							<div class="text w-100 mb-3 mt-4">
+								<div class="inside-list-overlay">
+								<h2><a href="work-single.html">Manicure</a></h2>
+								<h2><a href="work-single.html">Pedicure</a></h2>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-lg-3 ftco-animate">
+					<div class="work img d-flex align-items-center position-relative" style="background-image: url(images/facial.jpg);">
+						<div class="work-header-overlay w-100">
+							<h3>Facial & Skincare</h3>
+						</div>
+						<div class="desc w-100 px-4 text-center pt-5 mt-5">
+							<div class="text w-100 mb-3 mt-4">
+								<div class="inside-list-overlay">
+								<h2><a href="work-single.html">Facial</a></h2>
+								<h2><a href="work-single.html">Threading</a></h2>
+								<h2><a href="work-single.html">Waxing</a></h2>
+							</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+		
 
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-          	<div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-kitchen"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Kitchen Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div> 
-          </div>
 
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-            <div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-garden"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Garden Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-4 services ftco-animate">
-          	<div class="d-block d-flex">
-              <div class="icon d-flex justify-content-center align-items-center">
-            		<span class="flaticon-balcony"></span>
-              </div>
-              <div class="media-body pl-3">
-                <h3 class="heading">Window Cleaning</h3>
-                <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic.</p>
-                <p><a href="#" class="btn-custom">Read more</a></p>
-              </div>
-            </div>
-          </div>
-        </div>
-    	</div>
-    </section>
+
+
 
     <section class="ftco-section ftco-no-pt">
 			<div class="container">
@@ -464,115 +486,6 @@
       </div>
     </section>
 		
-		<section class="ftco-section ftco-no-pb">
-			<div class="container">
-				<div class="row justify-content-center pb-5 mb-3">
-          <div class="col-md-12 heading-section  text-center ftco-animate">
-          	<span class="subheading">Our Project</span>
-            <h2>We have done many latest cleaning project</h2>
-          </div>
-        </div>
-				<div class="row">
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="work img d-flex align-items-center" style="background-image: url(images/work-1.jpg);">
-            	<a href="images/work-1.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="fa fa-expand"></span>
-	    				</a>
-            	<div class="desc w-100 px-4 text-center pt-5 mt-5">
-	              <div class="text w-100 mb-3 mt-4">
-	              	<h2><a href="work-single.html">House Cleaning</a></h2>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="work img d-flex align-items-center" style="background-image: url(images/work-2.jpg);">
-            	<a href="images/work-2.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="fa fa-expand"></span>
-	    				</a>
-            	<div class="desc w-100 px-4 text-center pt-5 mt-5">
-	              <div class="text w-100 mb-3 mt-4">
-	              	<h2><a href="work-single.html">Window Cleaning</a></h2>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="work img d-flex align-items-center" style="background-image: url(images/work-3.jpg);">
-            	<a href="images/work-3.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="fa fa-expand"></span>
-	    				</a>
-            	<div class="desc w-100 px-4 text-center pt-5 mt-5">
-	              <div class="text w-100 mb-3 mt-4">
-	              	<h2><a href="work-single.html">Pool Cleaning</a></h2>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="work img d-flex align-items-center" style="background-image: url(images/work-4.jpg);">
-            	<a href="images/work-4.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="fa fa-expand"></span>
-	    				</a>
-            	<div class="desc w-100 px-4 text-center pt-5 mt-5">
-	              <div class="text w-100 mb-3 mt-4">
-	              	<h2><a href="work-single.html">Office Cleaning</a></h2>
-	              </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="work img d-flex align-items-center" style="background-image: url(images/work-5.jpg);">
-            	<a href="images/work-5.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="fa fa-expand"></span>
-	    				</a>
-            	<div class="desc w-100 px-4 text-center pt-5 mt-5">
-	              <div class="text w-100 mb-3 mt-4">
-	              	<h2><a href="work-single.html">Carpet Cleaning</a></h2>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="work img d-flex align-items-center" style="background-image: url(images/work-6.jpg);">
-            	<a href="images/work-6.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="fa fa-expand"></span>
-	    				</a>
-            	<div class="desc w-100 px-4 text-center pt-5 mt-5">
-	              <div class="text w-100 mb-3 mt-4">
-	              	<h2><a href="work-single.html">Garden Cleaning</a></h2>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="work img d-flex align-items-center" style="background-image: url(images/work-7.jpg);">
-            	<a href="images/work-7.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="fa fa-expand"></span>
-	    				</a>
-            	<div class="desc w-100 px-4 text-center pt-5 mt-5">
-	              <div class="text w-100 mb-3 mt-4">
-	              	<h2><a href="work-single.html">Carpet Cleaning</a></h2>
-	              </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-6 col-lg-3 ftco-animate">
-            <div class="work img d-flex align-items-center" style="background-image: url(images/work-8.jpg);">
-            	<a href="images/work-8.jpg" class="icon image-popup d-flex justify-content-center align-items-center">
-	    					<span class="fa fa-expand"></span>
-	    				</a>
-            	<div class="desc w-100 px-4 text-center pt-5 mt-5">
-	              <div class="text w-100 mb-3 mt-4">
-	              	<h2><a href="work-single.html">Pool Cleaning</a></h2>
-	              </div>
-              </div>
-            </div>
-          </div>
-        </div>
-			</div>
-		</section>	
 		
 		<section class="ftco-section">
       <div class="container">
