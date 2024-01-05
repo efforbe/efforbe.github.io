@@ -1,45 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   
-<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
-  <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function () {
-      Calendly.initBadgeWidget({
-        url: 'https://calendly.com/efforbe',
-        text: 'Book Appointment',
-        color: '#0069ff',
-        textColor: '#ffffff',
-        branding: false
+
+<script src="js/setmorelframeLive.js"></script>
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function () {
+    // Function to simulate a click on the Setmore button
+    function simulateSetmoreButtonClick() {
+      var setmoreButton = document.getElementById('Setmore_button_iframe');
+      if (setmoreButton) {
+        setmoreButton.click();
+      }
+    }
+
+    // Add an event listener to each anchor tag with the class 'booking-link'
+    var bookingLinks = document.querySelectorAll('.booking-link');
+    bookingLinks.forEach(function (link) {
+      link.addEventListener('click', function (event) {
+        // Prevent the default behavior of the anchor tag
+        event.preventDefault();
+
+        // Call the function to simulate a click on the Setmore button
+        simulateSetmoreButtonClick();
       });
 
-      // Function to open the Calendly widget
-      function openCalendlyWidget() {
-        Calendly.showPopupWidget('https://calendly.com/efforbe');
-      }
+      // Add an event listener for touch devices
+      link.addEventListener('touchend', function (event) {
+        // Prevent the default behavior of the anchor tag
+        event.preventDefault();
 
-      // Add an event listener to each anchor tag with the class 'calendly-link'
-      var calendlyLinks = document.querySelectorAll('.calendly-link');
-      calendlyLinks.forEach(function (link) {
-        link.addEventListener('click', function (event) {
-          // Prevent the default behavior of the anchor tag
-          event.preventDefault();
-
-          // Call the function to open the Calendly widget directly
-          openCalendlyWidget();
-        });
-
-        // Add an event listener for touch devices
-        link.addEventListener('touchend', function (event) {
-          // Prevent the default behavior of the anchor tag
-          event.preventDefault();
-
-          // Call the function to open the Calendly widget directly
-          openCalendlyWidget();
-        });
+        // Call the function to simulate a click on the Setmore button
+        simulateSetmoreButtonClick();
       });
     });
-  </script>
+  });
+</script>
+
 
 
   <head>
@@ -128,11 +124,14 @@
 	<!-- <a id="calendly-badge-widget" href="#" style="position: fixed; bottom: 20px; right: 20px; padding: 10px 20px; background-color: #0069ff; color: #ffffff; text-decoration: none; border-radius: 5px;">Book Appointment</a> -->
 
 	<!-- Calendly badge widget begin -->
-	<link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+	<!-- <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
 	<script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
-	<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/efforbe', text: 'Book Appointment', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script>
+	<script type="text/javascript">window.onload = function() { Calendly.initBadgeWidget({ url: 'https://calendly.com/efforbe', text: 'Book Appointment', color: '#0069ff', textColor: '#ffffff', branding: false }); }</script> -->
 	<!-- Calendly badge widget end -->
-	
+
+	<!-- booking floating widget -->
+	<!-- <script id="setmore_script" type="text/javascript" src="https://storage.googleapis.com/fullintegration-live/webComponentAppListing/Container/setmoreIframeLive.js"></script><a style="float:none; position: fixed; right: -2px; top: 25%; display: block; z-index: 20000" id="Setmore_button_iframe"  href="https://booking.setmore.com/scheduleappointment/8f700a3d-7b43-49bd-b07f-3022b005da0c"><img border="none" src="https://storage.googleapis.com/full-assets/setmore/images/1.0/Calendar/Setmore-Book-Now.png" alt="Book an appointment with efforbe beauty using Setmore"/></a> -->
+	<script id="setmore_script" type="text/javascript" src="js/setmorelframeLive.js"></script><a style="float:none; position: fixed; right: -2px; top: 25%; display: block; z-index: 20000" id="Setmore_button_iframe"  href="https://booking.setmore.com/scheduleappointment/8f700a3d-7b43-49bd-b07f-3022b005da0c"><img border="none" src="https://storage.googleapis.com/full-assets/setmore/images/1.0/Calendar/Setmore-Book-Now.png" alt="Book an appointment with efforbe beauty using Setmore"/></a>
 
 	  <section class="ftco-appointment ftco-section ftco-no-pt ftco-no-pb">
 			<div class="overlay"></div>
@@ -312,7 +311,6 @@
 					<h4 style="font-size: 24px; font-weight: bold; color: #333;">Book your appointment now</h4>
 				</div>
 				
-
 			</div>
 			<div class="row">
 				<div class="col-md-6 col-lg-3 ftco-animate">
@@ -323,10 +321,10 @@
 						<div class="desc w-100 px-4 text-center pt-5 mt-5">
 							<div class="text w-100 mb-3 mt-4">
 								<div class="inside-list-overlay">
-								<h2><a id="calendly-link" class="calendly-link" href="#">Straightening</a></h2>
-								<h2><a id="calendly-link" class="calendly-link" href="#">Smoothening</a></h2>
-								<h2><a id="calendly-link" class="calendly-link" href="#">Cutting</a></h2>
-								<h2><a id="calendly-link" class="calendly-link" href="#">Coloring</a></h2>
+								<h2><a id="booking-link1" class="booking-link" href="#">Straightening</a></h2>
+								<h2><a id="booking-link2" class="booking-link" href="#">Smoothening</a></h2>
+								<h2><a id="booking-link3" class="booking-link" href="#">Cutting</a></h2>
+								<h2><a id="booking-link4" class="booking-link" href="#">Coloring</a></h2>
 							</div>
 							</div>
 						</div>
@@ -340,9 +338,9 @@
 						<div class="desc w-100 px-4 text-center pt-5 mt-5">
 							<div class="text w-100 mb-3 mt-4">
 								<div class="inside-list-overlay">
-								<h2><a id="calendly-link" class="calendly-link" href="#">Keratin Treatment</a></h2>
-								<h2><a id="calendly-link" class="calendly-link" href="#">Hair Botox</a></h2>
-								<h2><a id="calendly-link" class="calendly-link" href="#">Hair Spa</a></h2>
+								<h2><a id="booking-link5" class="booking-link" href="#">Keratin Treatment</a></h2>
+								<h2><a id="booking-link6" class="booking-link" href="#">Hair Botox</a></h2>
+								<h2><a id="booking-link7" class="booking-link" href="#">Hair Spa</a></h2>
 							</div>
 							</div>
 						</div>
@@ -356,8 +354,8 @@
 						<div class="desc w-100 px-4 text-center pt-5 mt-5">
 							<div class="text w-100 mb-3 mt-4">
 								<div class="inside-list-overlay">
-								<h2><a id="calendly-link" class="calendly-link" href="#">Manicure</a></h2>
-								<h2><a id="calendly-link" class="calendly-link" href="#">Pedicure</a></h2>
+								<h2><a id="booking-link8" class="booking-link" href="#">Manicure</a></h2>
+								<h2><a id="booking-link9" class="booking-link" href="#">Pedicure</a></h2>
 							</div>
 							</div>
 						</div>
@@ -371,9 +369,9 @@
 						<div class="desc w-100 px-4 text-center pt-5 mt-5">
 							<div class="text w-100 mb-3 mt-4">
 								<div class="inside-list-overlay">
-								<h2><a id="calendly-link" class="calendly-link" href="#">Facial</a></h2>
-								<h2><a id="calendly-link" class="calendly-link" href="#">Threading</a></h2>
-								<h2><a id="calendly-link" class="calendly-link" href="#">Waxing</a></h2>
+								<h2><a id="booking-link10" class="booking-link" href="#">Facial</a></h2>
+								<h2><a id="booking-link11" class="booking-link" href="#">Threading</a></h2>
+								<h2><a id="booking-link12" class="booking-link" href="#">Waxing</a></h2>
 							</div>
 							</div>
 						</div>
@@ -383,8 +381,6 @@
 		</div>
 		</div>
 	</section>
-
-
 
     <section class="ftco-section bg-light">
 		<div id="my-price-section" class="toggle">
