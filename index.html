@@ -273,9 +273,38 @@
     		<div class="row justify-content-center pb-5 mb-3">
           <div class="col-md-7 heading-section text-center ftco-animate">
           	<span class="subheading mb-3">Price &amp; Plans</span>
+			<br>
 
 			<!-- Google sheets section -->
-			  <iframe title="Effore Pricing Table" height="500" width="380" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRIVN3ZGgr8-jFZ78Ge80FT4i8zDrmz4ax31N9l-6tJQQEW2nUrjkmxoEPzGCiyCa4arFMYPjS6ZSdN/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+			  <!-- <iframe title="Effore Pricing Table" height="500" width="380" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRIVN3ZGgr8-jFZ78Ge80FT4i8zDrmz4ax31N9l-6tJQQEW2nUrjkmxoEPzGCiyCa4arFMYPjS6ZSdN/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
+			 -->
+			<!-- Actual iframe with lazy loading -->
+			<iframe id="lazyIframe" title="Effore Pricing Table" width="380" height="500" data-src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRIVN3ZGgr8-jFZ78Ge80FT4i8zDrmz4ax31N9l-6tJQQEW2nUrjkmxoEPzGCiyCa4arFMYPjS6ZSdN/pubhtml?gid=0&amp;single=true&amp;widget=true&amp;headers=false" loading="lazy"></iframe>
+			<script>
+				// Intersection Observer to lazy load the iframe
+				const lazyIframe = document.getElementById('lazyIframe');
+
+				const observer = new IntersectionObserver((entries, observer) => {
+				entries.forEach(entry => {
+					if (entry.isIntersecting) {
+					// Load the iframe when it becomes visible
+					lazyIframe.src = lazyIframe.dataset.src;
+					observer.unobserve(lazyIframe);
+					}
+				});
+				});
+
+				observer.observe(lazyIframe);
+
+				// Remove placeholder div after iframe has loaded
+				lazyIframe.addEventListener('load', () => {
+				const placeholderDiv = lazyIframe.previousElementSibling;
+				if (placeholderDiv) {
+					placeholderDiv.remove();
+				}
+				});
+			</script>
+			<br><br>
 
             <h5>Our pricing evolves with your needs. Stay informed about our latest offers on Facebook and Instagram, where we regularly update.</h5>
 			<br>
