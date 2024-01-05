@@ -40,7 +40,7 @@ var setmorePopup = function (k, isReschedule, isbookAppointmentResource, e, book
     var templ = {};
     templ.overlay = '<div id="setmore-overlay"></div>';
     templ.popup =
-        '<div id="setmore-fancy-box" style= " background-color: #FFFFFF;height: auto;left: 50%;position: absolute;top: 0;width: 80%;max-width: 545px;z-index: 9999;">' +
+        '<div id="setmore-fancy-box" style= " background-color: #FFFFFF;height: auto;left: 50%;position: absolute;top: 0;width: 80%;max-width: 400px;z-index: 9999;">' +
         '<div id="setmore-fancy-box-close-icon"></div>' +
         '<div id="setmore-fancy-box-content">' +
         '<div class="iframe_loader" style="position: absolute; left: 50%;top: 50%; -ms-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%)"><img src="https://storage.googleapis.com/setmore-assets/2.0/Images/Logos/setmore-loader.gif" width="48" height="48" ></div>' +
@@ -153,8 +153,11 @@ var loadCss = function () {
         setTimeout(function () {
             loadSetmoreFancyBox();
         }, 600);
+
     };
 
+    // Binding click event to the "a" tag. Added this to override the
+    // FancyBox plugin
     var loadSetmoreFancyBox = function () {
         jQuery("[id=Setmore_button_iframe]").on('click', function (e) {
             e.preventDefault();
@@ -183,6 +186,7 @@ var loadCss = function () {
                 companyKey = bookingPageInfo[bookingPageInfo.indexOf("bookappointment") - 1];
             else
                 companyKey = bookingPageInfo[bookingPageInfo.length - 1];
+
 
             if (companyKey.indexOf("?") != -1) {
                 companyKey = companyKey.split("?")[0];
