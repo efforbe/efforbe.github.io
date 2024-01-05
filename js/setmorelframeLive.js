@@ -40,7 +40,7 @@ var setmorePopup = function (k, isReschedule, isbookAppointmentResource, e, book
     var templ = {};
     templ.overlay = '<div id="setmore-overlay"></div>';
     templ.popup =
-        '<div id="setmore-fancy-box" style= " background-color: #FFFFFF;height: auto;left: 50%;position: absolute;top: 0;width: 545px;z-index: 9999;">' +
+        '<div id="setmore-fancy-box" style= " background-color: #FFFFFF;height: auto;left: 50%;position: absolute;top: 0;width: 80%;max-width: 545px;z-index: 9999;">' +
         '<div id="setmore-fancy-box-close-icon"></div>' +
         '<div id="setmore-fancy-box-content">' +
         '<div class="iframe_loader" style="position: absolute; left: 50%;top: 50%; -ms-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%)"><img src="https://storage.googleapis.com/setmore-assets/2.0/Images/Logos/setmore-loader.gif" width="48" height="48" ></div>' +
