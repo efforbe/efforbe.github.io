@@ -153,11 +153,8 @@ var loadCss = function () {
         setTimeout(function () {
             loadSetmoreFancyBox();
         }, 600);
-
     };
 
-    // Binding click event to the "a" tag. Added this to override the
-    // FancyBox plugin
     var loadSetmoreFancyBox = function () {
         jQuery("[id=Setmore_button_iframe]").on('click', function (e) {
             e.preventDefault();
@@ -186,7 +183,6 @@ var loadCss = function () {
                 companyKey = bookingPageInfo[bookingPageInfo.indexOf("bookappointment") - 1];
             else
                 companyKey = bookingPageInfo[bookingPageInfo.length - 1];
-
 
             if (companyKey.indexOf("?") != -1) {
                 companyKey = companyKey.split("?")[0];
